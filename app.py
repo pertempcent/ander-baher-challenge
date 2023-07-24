@@ -25,7 +25,7 @@ def user_detail(user_id):
     conn.close()
     return render_template("user_detail.html", user=user)
 
-@app.route("/api/users", methods=["GET"])  # Add this route decorator
+@app.route("/api/users", methods=["GET"]) 
 def api_get_users():
     conn = sqlite3.connect("users.db")
     cursor = conn.cursor()
